@@ -50,6 +50,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: cicd-node
+          service: node-service
           cluster: cicd-node
           wait-for-service-stability: true    
