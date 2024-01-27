@@ -81,5 +81,8 @@
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
-    }
+    },
+    "registeredAt": "2023-12-29T08:52:44.354Z",
+    "registeredBy": "arn:aws:iam::193351675856:root",
+    "tags": []
 }
