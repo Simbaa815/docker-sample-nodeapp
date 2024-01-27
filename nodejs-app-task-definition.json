@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "{{ TASKDEFINITIONARN }}",
+    "taskDefinitionArn": "${{ secrets.TASKDEFINITIONARN }}",
     "containerDefinitions": [
         {
             "name": "cicd-node",
-            "image": "{{ steps.login-ecr.outputs.registry }}",
+            "image": "193351675856.dkr.ecr.us-east-1.amazonaws.com/cicd-node:latest",
             "cpu": 0,
             "portMappings": [
                 {
@@ -33,8 +33,8 @@
         }
     ],
     "family": "cicd-node",
-    "taskRoleArn": "{{ TASKROLEARN }}",
-    "executionRoleArn": "{{ EXECUTIONROLEARN }}",
+    "taskRoleArn": "${{ secrets.TASKROLEARN }}",
+    "executionRoleArn": "${{ secrets.EXECUTIONROLEARN }}",
     "networkMode": "awsvpc",
     "revision": 4,
     "volumes": [],
@@ -83,6 +83,6 @@
         "operatingSystemFamily": "LINUX"
     },
     "registeredAt": "2024-01-27T16:21:23.603Z",
-    "registeredBy": "{{ AWS_IAM }}",
+    "registeredBy": "${{ secrets.AWS_IAM }}",
     "tags": []
 }
