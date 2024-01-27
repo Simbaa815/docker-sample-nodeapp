@@ -83,6 +83,6 @@
         "operatingSystemFamily": "LINUX"
     },
     "registeredAt": "2024-01-27T16:21:23.603Z",
-    "registeredBy": "${{ secrets.AWS_IAM }}",
+    "registeredBy": "arn:aws:iam::193351675856:user/shaktimaan",
     "tags": []
 }
