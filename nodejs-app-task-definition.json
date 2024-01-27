@@ -2,7 +2,7 @@
     "taskDefinitionArn": "${{ secrets.taskDefinitionArn }}",
     "containerDefinitions": [
         {
-            "name": "Nodejs-app",
+            "name": "cicd-node",
             "image": "${{ steps.login-ecr.outputs.registry }}" ,
             "cpu": 0,
             "portMappings": [
