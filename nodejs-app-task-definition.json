@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "cicd-node",
-            "image": " ${{ steps.login-ecr.outputs.registry }}",
+            "image": "${{ steps.login-ecr.outputs.registry }}",
             "cpu": 0,
             "portMappings": [
                 {
