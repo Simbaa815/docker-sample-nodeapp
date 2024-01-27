@@ -32,7 +32,7 @@
             }
         }
     ],
-    "family": "nodejs-app-task-definition",
+    "family": "cicd-node",
     "taskRoleArn": "${{ secrets.taskRoleArn }}",
     "executionRoleArn": "${{ secrets.executionRoleArn }}",
     "networkMode": "awsvpc",
