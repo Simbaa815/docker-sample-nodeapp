@@ -45,6 +45,7 @@ jobs:
       #     container-name: cicd-node
       #     image: ${{ steps.build-image.outputs.image }}
 
+#just for checking
       - name: Print Task Definition Output
         run: echo "Task Definition Output: ${{ steps.task-def.outputs.task-definition }}"
 
