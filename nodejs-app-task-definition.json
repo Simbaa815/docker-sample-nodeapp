@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "${{ secrets.taskDefinitionArn }}",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:193351675856:task-definition/cicd-node:4",
     "containerDefinitions": [
         {
             "name": "cicd-node",
-            "image": "${{ steps.login-ecr.outputs.registry }}" ,
+            "image": "193351675856.dkr.ecr.us-east-1.amazonaws.com/cicd-node",
             "cpu": 0,
             "portMappings": [
                 {
@@ -24,8 +24,8 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/nodejs-app-task-definition",
-                    "awslogs-region": "${{ secrets.AWS_REGION }}",
+                    "awslogs-group": "/ecs/cicd-node",
+                    "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
                 "secretOptions": []
@@ -33,8 +33,8 @@
         }
     ],
     "family": "cicd-node",
-    "taskRoleArn": "${{ secrets.taskRoleArn }}",
-    "executionRoleArn": "${{ secrets.executionRoleArn }}",
+    "taskRoleArn": "arn:aws:iam::193351675856:role/ECSTaskExecutionRole---demo",
+    "executionRoleArn": "arn:aws:iam::193351675856:role/ECSTaskExecutionRole---demo",
     "networkMode": "awsvpc",
     "revision": 4,
     "volumes": [],
@@ -86,3 +86,9 @@
     "registeredBy": "arn:aws:iam::193351675856:root",
     "tags": []
 }
+JSON
+
+
+
+CloudShell
+Feedback
