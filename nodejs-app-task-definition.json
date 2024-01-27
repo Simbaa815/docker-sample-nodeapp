@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "${{ secrets.TASKDEFINITIONARN }}",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:193351675856:task-definition/cicd-node:5",
     "containerDefinitions": [
         {
             "name": "cicd-node",
@@ -16,10 +16,8 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -27,16 +25,15 @@
                     "awslogs-group": "/ecs/cicd-node",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
+                }
             }
         }
     ],
     "family": "cicd-node",
-    "taskRoleArn": "${{ secrets.TASKROLEARN }}",
-    "executionRoleArn": "${{ secrets.EXECUTIONROLEARN }}",
+    "taskRoleArn": "arn:aws:iam::193351675856:role/ECSTaskExecutionRole---demo",
+    "executionRoleArn": "arn:aws:iam::193351675856:role/ECSTaskExecutionRole---demo",
     "networkMode": "awsvpc",
-    "revision": 4,
+    "revision": 5,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -82,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-01-27T16:21:23.603Z",
+    "registeredAt": "2024-01-27T16:28:04.418Z",
     "registeredBy": "arn:aws:iam::193351675856:user/shaktimaan",
     "tags": []
 }
